@@ -20,10 +20,11 @@ from core import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('<idade>/<nome>', views.index),
+    # path('<idade>/<nome>', views.index),
     path('soma/<num1>/<num2>', views.soma),
     path('sub/<num1>/<num2>', views.sub),
     path('mult/<num1>/<num2>', views.mult),
     path('div/<num1>/<num2>', views.div),
+    path('viewcomclasse/<nome>', views.IndexView.as_view(), name='index'),
     path('', views.index),
 ]
